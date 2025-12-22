@@ -30,12 +30,26 @@ app.get("/listings",async (req,res) => {
   res.render("listings/index.ejs",{allListings});
 });
 
+// Add New Lisitng Route(Must be kept above Listing Route else it will consider new as an id and return an error).
+app.get("/listings/new", (req,res) => {
+  res.render("listings/new.ejs");
+});
+
 // Show Listing Route
 app.get("/listings/:id", async (req,res) => {
   let { id } = req.params;
   const listing = await Listing.findById(id);
   res.render("listings/show.ejs", { listing });
 });
+
+// Create new Lisiting route 
+app.post("/listings", async (req,res) => {
+  const newListing = new Listing(req.body.listing);
+  await newListing.save();
+  res.redirect("/listings");
+});
+
+
 // app.get("/testListing", async (req,res) => {
 //   let sampleLisiting = new Listing({
 //     title : "My New Villa",
