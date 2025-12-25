@@ -7,6 +7,7 @@ body {
 .container {
   flex: 1;
 }
+
 /* Footer */
 .f-info-links a{
   text-decoration: none;
@@ -51,7 +52,7 @@ body {
   justify-content: space-evenly;
 }
 
-/* */
+/* Show All Listings*/
 .listings {
   display: grid;
   grid-template-columns: repeat(3,1fr);
@@ -96,7 +97,7 @@ body {
   font-weight: bold;
 }
 
-/* Add Listing form */
+/* Add Listing and Edit Listing form*/
 .add-form {
   display: flex;
   flex-direction: column;
@@ -151,7 +152,7 @@ body {
 .submit-btn {
   width: 100%;
   padding: 12px;
-  background-color: #3E6B54;   /* logo green */
+  background-color: #3E6B54;
   color: #ffffff;
   border: none;
   border-radius: 8px;
@@ -162,6 +163,87 @@ body {
 }
 
 .submit-btn:hover {
-  background-color: #2F5542;  /* darker green */
+  background-color: #2F5542;
   transform: translateY(-1px);
+}
+
+
+/* Show Listings */
+.show-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.show-card-container {
+  width: 100%;
+  max-width: 900px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.show-card-container img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 5px;
+}
+
+.show-card-container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.li-title {
+  font-size: 23px !important;
+  font-weight: 600;
+  margin-bottom: 15px !important;
+}
+
+.show-card-container ul li {
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.show-card-container ul li:nth-child(3) {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2c7a7b;
+  margin-top: 10px;
+}
+
+/* Buttons */
+.show-btns {
+  display: flex;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.show-btns button {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+
+.show-btns form:first-child button {
+  background-color: #3E6B54;  
+  color: white;
+}
+
+.show-btns form:last-child button {
+  background-color: #e53e3e;
+  color: white;
+}
+
+
+.show-btns button:hover {
+  opacity: 0.9;
 }
