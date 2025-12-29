@@ -248,7 +248,7 @@ body {
   opacity: 0.9;
 }
 
-/* New Listing Form Validation(UI)*/
+/* Edit and New Listing Form Validation(UI)*/
 .form-group {
   margin-bottom: 16px;
 }
@@ -268,4 +268,20 @@ body {
 
 .form-group.error .error-msg {
   display: block;
+}
+
+/* error.ejs */
+.display-error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
+.display-error p {
+  background: #ffe6e6;
+  padding: 2rem 4rem;
+  border-radius: 8px;
+  color: #b30000;
+  font-weight: 500;
 }
