@@ -247,3 +247,25 @@ body {
 .show-btns button:hover {
   opacity: 0.9;
 }
+
+/* New Listing Form Validation(UI)*/
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group.error input,
+.form-group.error textarea {
+  border: 2px solid #e53e3e;
+  background-color: #fff5f5;
+}
+
+.error-msg {
+  color: #e53e3e;
+  font-size: 14px;
+  display: none;
+  margin-top: 4px;
+}
+
+.form-group.error .error-msg {
+  display: block;
+}
